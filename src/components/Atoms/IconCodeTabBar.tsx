@@ -3,10 +3,8 @@ import React from "react";
 
 export function IconCodeTabBar() {
     return (
-        <>
-            <div
-                className=" flex items-center px-2 py-1"
-                dir="rtl">
+        <button className=" flex items-center gap-2 px-2 py-1 hover:bg-zinc-800 hover:rounded-md">
+            <div dir="rtl">
                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                      data-view-component="true"
                      className="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
@@ -16,6 +14,6 @@ export function IconCodeTabBar() {
                 </svg>
             </div>
             <div className="font-mono">Code</div>
-        </>
+        </button>
     )
 }

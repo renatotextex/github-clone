@@ -7,6 +7,12 @@ import {MenuCredentials} from "@/components/Molecules/MenuCredentials";
 import {SubHeader} from "@/components/Molecules/SubHeader";
 import {ButtonsSubHeader} from "@/components/Molecules/ButtonsSubHeader";
 import {IconCodeTabBar} from "@/components/Atoms/IconCodeTabBar";
+import {IconIssuesTabBar} from "@/components/Atoms/IconIssuesTabBar";
+import {IconPullRequestsTabBar} from "@/components/Atoms/IconPullRequestsTabBar";
+import {IconActionsTabBar} from "@/components/Atoms/IconActionsTabBar";
+import {IconProjectsTabBar} from "@/components/Atoms/IconProjectsTabBar";
+import {IconSecurityTabBar} from "@/components/Atoms/IconSecurityTabBar";
+import {IconInsightsTabBar} from "@/components/Atoms/IconInsightsTabBar";
 
 interface User {
     name: string;
@@ -69,8 +75,17 @@ export default function Home() {
               <SubHeader html_user={user?.html_url} html_repo={repo?.html_url} name={repo?.name} login={user?.login}/>
               <ButtonsSubHeader forksCount={forksCount} starCount={repo?.stargazers_count}/>
           </div>
-          <div className="flex items-center py-5 px-8">
+          <div className="flex items-center gap-2 py-5 px-8 font-light text-[15px] ">
               <IconCodeTabBar/>
+              <IconIssuesTabBar/>
+              <IconPullRequestsTabBar/>
+              <IconActionsTabBar/>
+              <IconProjectsTabBar/>
+              <IconSecurityTabBar/>
+              <IconInsightsTabBar/>
+          </div>
+          <div>
+              <div className="w-full h-px bg-gray-700 opacity-70 -mt-3"/>
           </div>
       </main>
   );

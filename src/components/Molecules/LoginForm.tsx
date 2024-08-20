@@ -5,6 +5,7 @@ import {Label} from "@/components/Molecules/Label";
 import Input from "@/components/Molecules/Input";
 import {useForm, SubmitHandler } from "react-hook-form";
 import { userStore } from "@/stores/user-store";
+import { useNavigate } from "react-router-dom";
 
 type FormData = {
     username: string;
@@ -13,11 +14,14 @@ type FormData = {
 
 export function LoginForm() {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>()
+//    const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         userStore.setData({ username: data.username });
         console.log(data)
         console.log(userStore.data.username);
+
+      //  navigate('/app/page');
     }
 
     return (
